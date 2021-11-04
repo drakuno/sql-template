@@ -1,0 +1,23 @@
+{
+  "name": "drakuno/sql-token",
+  "description": "SQL query-building toolset",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Drakuno\\SqlTemplate\\": "src/"
+    },
+    "files": [
+      "src/Tools/functions.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Drakuno",
+      "email": "wolfdrakuno@gmail.com"
+    }
+  ],
+  "require":{},
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  }
+}
