@@ -4,7 +4,6 @@ namespace Drakuno\SqlTemplate\Maps\Placeholders;
 
 use Drakuno\SqlTemplate\TemplateInterface;
 use Drakuno\SqlTemplate\Placeholder;
-use Drakuno\SqlTemplate\Processors\JointProcessor;
 
 /**
  * Basic token to placeholders map

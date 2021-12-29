@@ -3,10 +3,6 @@
 use PHPUnit\Framework\TestCase;
 
 use Drakuno\SqlTemplate as Sql;
-use Drakuno\SqlTemplate\Maps\{
-  Sql\SqlMap,
-  Placeholders\PlaceholdersMap,
-};
 
 class RawTemplateTest extends TestCase
 {
@@ -19,6 +15,7 @@ class RawTemplateTest extends TestCase
     ]);
 
     $children = $template->getChildren();
+		$this->assertNotEmpty($children);
     $this->assertContainsOnlyInstancesOf(
       Sql\TemplateInterface::class,
       $children

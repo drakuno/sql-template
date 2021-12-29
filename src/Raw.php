@@ -4,8 +4,6 @@ namespace Drakuno\SqlTemplate;
 
 use TypeError;
 
-use Drakuno\SqlTemplate\Tools as T;
-
 class Raw implements TemplateInterface
 {
 	use NaturalAccessorsTrait;
@@ -21,10 +19,10 @@ class Raw implements TemplateInterface
 
 	public function getChildren():array
 	{
-		return array_filter(
+		return array_values(array_filter(
 			$this->getReplacements(),
-			function($rep){ return is_a($rep,TokenInterface::class); }
-		);
+			function($rep){ return is_a($rep,TemplateInterface::class); }
+		));
 	}
 
 	public function getReplacements():array{ return $this->replacements; }
