@@ -2,6 +2,8 @@
 
 namespace Drakuno\SqlTemplate;
 
+use Exception;
+
 class Name implements TemplateInterface
 {
 	use NaturalAccessorsTrait,NoChildrenTrait;
