@@ -42,6 +42,7 @@ class SelectAsSqlMap implements PartneredProcessorInterface,SqlMapInterface
     $group_by = $expr->getGroupBy();
     if (!empty($group_by))
       $sql = sprintf("%s GROUP BY %s",
+				$sql,
         implode(", ",array_map($partner,$group_by))
       );
 
